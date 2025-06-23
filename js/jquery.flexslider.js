@@ -178,7 +178,6 @@
           methods.controlNav.set();
           
           methods.controlNav.active();
-        
           slider.controlNavScaffold.delegate('a, img', eventType, function(event) {
             event.preventDefault();
             var $this = $(this),
