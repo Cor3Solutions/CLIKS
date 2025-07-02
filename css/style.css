@@ -1898,4 +1898,35 @@ span.color {
 .btn-details {
 	align-self: flex-end;
 }
+/* Ensure the card-content has enough vertical space */
+.card-content {
+    padding-bottom: 20px; /* Adjust this value as needed */
+    /* You might also consider min-height if cards vary greatly in content length */
+    /* min-height: 150px; */ /* Example, adjust based on your content */
+}
+
+/* Add margin to the button to push it down from the text */
+.card-content .btn-details {
+    margin-top: 10px; /* Adjust this value as needed */
+    /* You might also want to ensure it's a block element or inline-block for margin to work consistently */
+    display: inline-block; /* Or block, depending on desired layout */
+}
+
+/* If the h5 is too close to the button, add margin-bottom to it */
+.card-content h5 {
+    margin-bottom: 5px; /* Adjust as needed */
+}
+
+/* Ensure the image doesn't dictate a too-small card height */
+.card-image img {
+    height: 200px; /* Or whatever fixed height makes sense for your design */
+    object-fit: cover; /* Ensures images fill the space without distortion */
+    width: 100%;
+}
+
+/* Materialize cards have a min-height for the content, but sometimes custom content breaks it.
+   You might need to override it if the content section is too short. */
+.card.small .card-content {
+    min-height: 100px; /* Adjust this if your content is particularly tall */
+}
 
